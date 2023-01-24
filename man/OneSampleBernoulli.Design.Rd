@@ -38,7 +38,7 @@ The second and third elements of the list are the parameters a and b, respective
 
 \item{d}{The target improvement (minimal clinically meaningful difference).}
 
-\item{ps}{The efficacy boundary (uppper boundary).}
+\item{ps}{The efficacy boundary (upper boundary).}
 
 \item{pf}{The futility boundary (lower boundary).}
 

@@ -29,7 +29,7 @@
 #' @param p0 The null response rate, which could be taken as the standard or historical rate.
 #' @param p1 The response rate of the new treatment.
 #' @param d The target improvement (minimal clinically meaningful difference).
-#' @param ps The efficacy boundary (uppper boundary).
+#' @param ps The efficacy boundary (upper boundary).
 #' @param pf The futility boundary (lower boundary).
 #' @param power The power to achieve.
 #' @param t1error The controlled type-I-error.
