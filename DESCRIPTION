@@ -1,9 +1,12 @@
 Package: BayesDIP
 Type: Package
 Title: Bayesian Decreasingly Informative Priors for Early Termination Phase II Trials 
-Version: 0.1.0
-Date: 2022-11-14
-Author: Chen Wang <wangc10@vcu.edu>, Roy T. Sabo <roy.sabo@vcuhealth.org>
+Version: 0.1
+Date: 2023-1-22
+Authors@R: c(
+      person("Chen","Wang",email="wangc10@vcu.edu", role = c("cre", "aut")),
+      person("Roy", "Sabo",email="roy.sabo@vcuhealth.org", role = c("aut"))
+      )
 Maintainer: Chen Wang <wangc10@vcu.edu>
 Description: Provide early termination phase II trial designs with a decreasingly informative prior (DIP) 
              or a regular Bayesian prior chosen by the user. The program can determine the minimum 
@@ -11,7 +14,7 @@ Description: Provide early termination phase II trial designs with a decreasingl
              can also perform power and expected sample size calculations for the tests in early 
              termination Phase II trials.  
 License: GPL (>= 2)
+URL: https://github.com/chenw10/BayesDIP
+Imports: stats
 Encoding: UTF-8
 RoxygenNote: 7.2.2
-Imports: stats
-Repository: CRAN
