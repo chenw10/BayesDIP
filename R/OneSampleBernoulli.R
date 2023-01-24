@@ -32,14 +32,16 @@
 #' @param sim The number of simulations.
 #' @return A list of the arguments with method and computed elements
 #' @examples
+#' \donttest{
 #' # with traditional Bayesian prior Beta(1,1)
 #' OneSampleBernoulli(list(2,1,1), N = 100, p0 = 0.3, p1 = 0.5, d = 0.05,
 #'                    ps = 0.98, pf = 0.05, alternative = "greater",
-#'                    seed = 202210, sim = 5000)
+#'                    seed = 202210, sim = 100)
 #' # with DIP
 #' OneSampleBernoulli(list(1,0,0), N = 100, p0 = 0.3, p1 = 0.5, d = 0.05,
 #'                    ps = 0.98, pf = 0.05, alternative = "greater",
-#'                    seed = 202210, sim = 5000)
+#'                    seed = 202210, sim = 100)
+#' }
 #' @importFrom stats rbeta rbinom rgamma rnorm rpois
 #' @export OneSampleBernoulli
 

@@ -32,14 +32,16 @@
 #' @param sim The number of simulations.
 #' @return A list of the arguments with method and computed elements
 #' @examples
+#' \donttest{
 #' # with traditional Bayesian prior Gamma(0.5,0.001)
 #' OneSamplePoisson(list(2,0.5,0.001), N = 100, m0 = 0.5, m1 = 0.4, d = 0.05,
 #'                  ps = 0.95, pf = 0.05, alternative = "less",
-#'                  seed = 202210, sim = 5000)
+#'                  seed = 202210, sim = 100)
 #' # with DIP
 #' OneSamplePoisson(list(1,0,0), N = 100, m0 = 0.5, m1 = 0.4, d = 0.05,
 #'                  ps = 0.95, pf = 0.05, alternative = "less",
-#'                  seed = 202210, sim = 5000)
+#'                  seed = 202210, sim = 100)
+#' }
 #' @importFrom stats rbeta rbinom rgamma rnorm rpois
 #' @export OneSamplePoisson
 

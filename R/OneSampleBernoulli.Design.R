@@ -39,14 +39,16 @@
 #' @param sim The number of simulations.
 #' @return A list of the arguments with method and computed elements.
 #' @examples
+#' \donttest{
 #' # with traditional Bayesian prior Beta(1,1)
 #' OneSampleBernoulli.Design(list(2,1,1), nmin = 10, nmax=100, p0 = 0.3, p1 = 0.5, d = 0,
 #'                    ps = 0.98, pf = 0.02, power = 0.80, t1error=0.05, alternative = "greater",
-#'                    seed = 202210, sim = 1000)
+#'                    seed = 202210, sim = 10)
 #' # with DIP
 #' OneSampleBernoulli.Design(list(1,0,0), nmin = 10, nmax=100, p0 = 0.3, p1 = 0.5, d = 0,
 #'                    ps = 0.98, pf = 0.02, power = 0.80, t1error=0.05, alternative = "greater",
-#'                    seed = 202210, sim = 1000)
+#'                    seed = 202210, sim = 10)
+#' }
 #' @importFrom stats rbeta rbinom rgamma rnorm rpois
 #' @export OneSampleBernoulli.Design
 

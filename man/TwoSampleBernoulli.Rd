@@ -54,12 +54,14 @@ standard deviation, the probability of reaching the efficacy and futility bounda
 Equal allocation between two treatment groups.
 }
 \examples{
+\donttest{
 # with traditional Bayesian prior Beta(1,1)
 TwoSampleBernoulli(list(2,1,1), N = 200, p1 = 0.5, p2 = 0.3, d = 0,
                    ps = 0.90, pf = 0.05, alternative = "greater",
-                   seed = 202210, sim = 1000)
+                   seed = 202210, sim = 100)
 # with DIP
 TwoSampleBernoulli(list(1,0,0), N = 200, p1 = 0.5, p2 = 0.3, d = 0,
                    ps = 0.90, pf = 0.05, alternative = "greater",
-                   seed = 202210, sim = 1000)
+                   seed = 202210, sim = 100)
+}
 }

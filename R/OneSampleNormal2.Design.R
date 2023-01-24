@@ -41,16 +41,18 @@
 #' @param sim The number of simulations.
 #' @return A list of the arguments with method and computed elements.
 #' @examples
+#' \donttest{
 #' # with traditional Bayesian prior Beta(1,1)
 #' OneSampleNormal2.Design(list(2,2,1), nmin = 10, nmax = 100, mu0 = 100, mu1 = 95,
 #'                         var0=225, var=225, d = 0, ps = 0.95, pf = 0.05,
 #'                         power = 0.8, t1error = 0.05, alternative = "less",
-#'                         seed = 202210, sim = 1000)
+#'                         seed = 202210, sim = 10)
 #' # with DIP
 #' OneSampleNormal2.Design(list(1,0,0), nmin = 10, nmax = 100, mu0 = 100, mu1 = 95,
 #'                         var0=225, var=225, d = 0, ps = 0.95, pf = 0.05,
 #'                         power = 0.8, t1error = 0.05, alternative = "less",
-#'                         seed = 202210, sim = 1000)
+#'                         seed = 202210, sim = 10)
+#' }
 #' @importFrom stats rbeta rbinom rgamma rnorm rpois
 #' @export OneSampleNormal2.Design
 

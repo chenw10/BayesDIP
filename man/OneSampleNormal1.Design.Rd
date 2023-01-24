@@ -66,12 +66,14 @@ If there are no admissible design based on controlled type-I-error, then default
 the designs with the lowest type-I-error and at least the user-defined (e.g. 80\%) power.
 }
 \examples{
+\donttest{
 # with traditional Bayesian prior Beta(1,1)
 OneSampleNormal1.Design(list(2,6), nmin = 10, nmax = 100, mu0 = 100, mu1 = 95, var=15, d = 0.05,
                   ps = 0.95, pf = 0.05, power = 0.8, t1error = 0.05, alternative = "less",
-                  seed = 202210, sim = 1000)
+                  seed = 202210, sim = 10)
 # with DIP
 OneSampleNormal1.Design(list(1,0), nmin = 10, nmax = 100, mu0 = 100, mu1 = 95, var=15, d = 0.05,
                   ps = 0.95, pf = 0.05, power = 0.8, t1error = 0.05, alternative = "less",
-                  seed = 202210, sim = 1000)
+                  seed = 202210, sim = 10)
+}
 }

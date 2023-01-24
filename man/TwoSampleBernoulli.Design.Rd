@@ -63,14 +63,14 @@ If there are no admissible design based on controlled type-I-error, then default
 the designs with the lowest type-I-error and at least the user-defined (e.g. 80\%) power.
 }
 \examples{
-\dontrun{
+\donttest{
 # with traditional Bayesian prior Beta(1,1)
 TwoSampleBernoulli.Design(list(2,1,1), nmin = 100, nmax = 120, p1 = 0.5, p2 = 0.3, d = 0,
                    ps = 0.90, pf = 0.05, power = 0.8, t1error = 0.05, alternative = "greater",
-                   seed = 202210, sim = 1000)
+                   seed = 202210, sim = 10)
 # with DIP
 TwoSampleBernoulli.Design(list(1,0,0), nmin = 100, nmax = 120, p1 = 0.5, p2 = 0.3, d = 0,
                    ps = 0.90, pf = 0.05, power = 0.8, t1error = 0.05, alternative = "greater",
-                   seed = 202210, sim = 1000)
+                   seed = 202210, sim = 10)
 }
 }
