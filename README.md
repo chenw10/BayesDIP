@@ -10,7 +10,7 @@ informative prior (DIP) or a regular Bayesian prior chosen by the user.
 The program can determine the minimum planned sample size necessary to
 achieve the user-specified admissible designs. The program can also
 perform power and expected sample size calculations for the tests in
-early termination Phase II trials.
+early termination Phase II trials.$^{[1]}$
 
 ## Installation
 
@@ -110,3 +110,10 @@ OneSampleBernoulli(list(1,0,0), N = 100, p0 = 0.3, p1 = 0.5, d = 0.05,
 #> The probability of reaching the efficacy boundary:   0.86 
 #> The probability of reaching the futility boundary:   0
 ```
+
+## Reference
+
+\[1\] Wang C, Sabo RT, Mukhopadhyay ND, and Perera RA. Early termination
+in single-parameter model phase II clinical trial designs using
+decreasingly informative priors. , 9(2): April - June 2022.
+<https://doi.org/10.18203/2349-3259.ijct20221110>
