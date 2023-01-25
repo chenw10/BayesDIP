@@ -10,7 +10,7 @@ informative prior (DIP) or a regular Bayesian prior chosen by the user.
 The program can determine the minimum planned sample size necessary to
 achieve the user-specified admissible designs. The program can also
 perform power and expected sample size calculations for the tests in
-early termination Phase II trials.$^{[1]}$
+early termination Phase II trials.\[1\]
 
 ## Installation
 
