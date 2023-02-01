@@ -287,15 +287,12 @@ for (N in seq(from=nmin1, to=nmax, by=1)){
     } else if (prior[[1]] == 2) {method = paste("Beta(",prior[[2]], ",", prior[[3]], ")", sep="")}
 
 
-    cat("\nPrior:  ", method,
-        "\nTotal planned sample size:  ", planN,
-        "\nEfficacy Boundary:  ", ps,
-        "\nFutility Boundary:  ", pf,
-        "\nExact Power: ", exact.power,
-        "\nExact Type I error:  ", exact.t1,
-        "\nExpected sample size (standard deviation) for the new treatment group (group 1): ", grp1,
-        "\nExpected sample size (standard deviation) for the compared treatment group (group 2): ", grp2
-    )
+    z <- list(method = method, planned_sample_size = planN,
+              efficacy_boundary = ps, futility_boundary = pf,
+              exact_power = exact.power, exact_type_I_error = exact.t1,
+              expected_sample_size_and_std_for_the_new_treatment_group = grp1,
+              expected_sample_size_and_std_for_the_compared_treatment_group = grp2)
+    z
   } # End of Outputs
 }
 

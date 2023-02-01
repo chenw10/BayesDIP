@@ -33,16 +33,13 @@
 #' @param sim The number of simulations.
 #' @return A list of the arguments with method and computed elements.
 #' @examples
-#' \donttest{
 #' # with traditional Bayesian prior Beta(1,1)
 #' OneSampleNormal1(list(2,6), N = 100, mu0 = 100, mu1 = 95, var=15, d = 0.05,
 #'                   ps = 0.95, pf = 0.05, alternative = "less",
-#'                   seed = 202210, sim = 100)
-#' # with DIP
+#'                   seed = 202210, sim = 10)
 #' OneSampleNormal1(list(1,0), N = 100, mu0 = 100, mu1 = 95, var=15, d = 0.05,
 #'                   ps = 0.95, pf = 0.05, alternative = "less",
-#'                   seed = 202210, sim = 100)
-#' }
+#'                   seed = 202210, sim = 10)
 #' @importFrom stats rbeta rbinom rgamma rnorm rpois
 #' @export OneSampleNormal1
 
@@ -190,12 +187,8 @@ OneSampleNormal1 <- function(prior, N = 100, mu0, mu1, var, d = 0,
   if (prior[[1]] == 1) {method = "DIP"
   } else if (prior[[1]] == 2) {method = paste("Normal(",mu0, ",", var/prior[[2]], ")", sep="")}
 
-  cat("\nPrior:  ", method,
-      "\nPower: ", power,
-      "\nType I error:  ", t1error,
-      "\nExpected sample size:  ", ss,
-      "\nExpected sample size standard deviation:  ", sd,
-      "\nThe probability of reaching the efficacy boundary:  ", power,
-      "\nThe probability of reaching the futility boundary:  ", fut.rate
-  )
+  z <- list(method = method, power = power, type_I_error = t1error,
+            expected_sample_size = ss, expected_sample_size_std = sd,
+            the_prob_efficacy = power, the_prob_futility = fut.rate)
+  z
 }

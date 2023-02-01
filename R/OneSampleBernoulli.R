@@ -32,16 +32,14 @@
 #' @param sim The number of simulations.
 #' @return A list of the arguments with method and computed elements
 #' @examples
-#' \donttest{
 #' # with traditional Bayesian prior Beta(1,1)
 #' OneSampleBernoulli(list(2,1,1), N = 100, p0 = 0.3, p1 = 0.5, d = 0.05,
 #'                    ps = 0.98, pf = 0.05, alternative = "greater",
-#'                    seed = 202210, sim = 100)
+#'                    seed = 202210, sim = 10)
 #' # with DIP
 #' OneSampleBernoulli(list(1,0,0), N = 100, p0 = 0.3, p1 = 0.5, d = 0.05,
 #'                    ps = 0.98, pf = 0.05, alternative = "greater",
-#'                    seed = 202210, sim = 100)
-#' }
+#'                    seed = 202210, sim = 10)
 #' @importFrom stats rbeta rbinom rgamma rnorm rpois
 #' @export OneSampleBernoulli
 
@@ -184,12 +182,8 @@ OneSampleBernoulli <- function(prior, N = 100, p0, p1, d = 0,
   if (prior[[1]] == 1) {method = "DIP"
   } else if (prior[[1]] == 2) {method = paste("Beta(",prior[[2]], ",", prior[[3]], ")", sep="")}
 
-  cat("\nPrior:  ", method,
-      "\nPower: ", power,
-      "\nType I error:  ", t1error,
-      "\nExpected sample size:  ", ss,
-      "\nExpected sample size standard deviation:  ", sd,
-      "\nThe probability of reaching the efficacy boundary:  ", power,
-      "\nThe probability of reaching the futility boundary:  ", fut.rate
-      )
+  z <- list(method = method, power = power, type_I_error = t1error,
+            expected_sample_size = ss, expected_sample_size_std = sd,
+            the_prob_efficacy = power, the_prob_futility = fut.rate)
+  z
 }

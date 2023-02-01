@@ -238,15 +238,11 @@ if (!is.null(result1) & !is.null(result2)){
    } else if (prior[[1]] == 2) {method = paste("Beta(",prior[[2]], ",", prior[[3]], ")", sep="")
    }
 
-   cat("\nPrior:  ", method,
-       "\nPlanned Sample Size:  ", planN,
-       "\nEfficacy Boundary:  ", ps,
-       "\nFutility Boundary:  ", pf,
-       "\nExact Power: ", exact.power,
-       "\nExact Type I error:  ", exact.t1,
-       "\nExpected sample size: ", ss,
-       "\nExpected sample size standard deviation: ", sd
-   )
+   z <- list(method = method, planned_sample_size = planN,
+             efficacy_boundary = ps, futility_boundary = pf,
+             exact_power = exact.power, exact_type_I_error = exact.t1,
+             expected_sample_size = ss, expected_sample_size_std = sd)
+   z
  } # End of Outputs
 
 }

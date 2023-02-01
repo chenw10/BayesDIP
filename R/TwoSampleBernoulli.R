@@ -33,16 +33,14 @@
 #' @param sim The number of simulations.
 #' @return A list of the arguments with method and computed elements
 #' @examples
-#' \donttest{
 #' # with traditional Bayesian prior Beta(1,1)
 #' TwoSampleBernoulli(list(2,1,1), N = 200, p1 = 0.5, p2 = 0.3, d = 0,
 #'                    ps = 0.90, pf = 0.05, alternative = "greater",
-#'                    seed = 202210, sim = 100)
+#'                    seed = 202210, sim = 5)
 #' # with DIP
 #' TwoSampleBernoulli(list(1,0,0), N = 200, p1 = 0.5, p2 = 0.3, d = 0,
 #'                    ps = 0.90, pf = 0.05, alternative = "greater",
-#'                    seed = 202210, sim = 100)
-#' }
+#'                    seed = 202210, sim = 5)
 #' @import stats
 #' @export TwoSampleBernoulli
 
@@ -237,14 +235,11 @@ t1error <- cat1s/sim
   grp1 = paste(ss1, " (", std1, ")", sep="")
   grp2 = paste(ss2, " (", std2, ")", sep="")
 
-  cat("\nPrior:  ", method,
-      "\nPower: ", power,
-      "\nType I error:  ", t1error,
-      "\nThe planned sample size for each group:  ", N/2,
-      "\nExpected sample size (standard deviation) for the new treatment (group 1):  ", grp1,
-      "\nExpected sample size (standard deviation) for the compared treatment (group 2):  ", grp2,
-      "\nThe probability of reaching the efficacy boundary:  ", power,
-      "\nThe probability of reaching the futility boundary:  ", fut.rate
-  )
+  z <- list(method = method, power = power, type_I_error = t1error,
+            The_planned_sample_size_for_each_group = N/2,
+            expected_sample_size_and_std_for_the_new_treatment = grp1,
+            expected_sample_size_and_std_for_the_compared_treatment = grp2,
+            the_prob_efficacy = power, the_prob_futility = fut.rate)
+  z
 }
 

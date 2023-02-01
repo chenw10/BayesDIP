@@ -63,14 +63,12 @@ return the power, the type I error, the expected sample size and its
 standard deviation, the probability of reaching the efficacy and futility boundaries.
 }
 \examples{
-\donttest{
 # with traditional Bayesian prior Beta(1,1)
 OneSampleNormal2(list(2,2,1), N = 100, mu0 = 100, mu1 = 95, var0=225, var=225, d = 0,
                         ps = 0.95, pf = 0.05, alternative = "less",
-                        seed = 202210, sim = 100)
+                        seed = 202210, sim = 10)
 # with DIP
 OneSampleNormal2(list(1,0,0), N = 100, mu0 = 100, mu1 = 95, var0=225, var=225, d = 0,
                         ps = 0.95, pf = 0.05, alternative = "less",
-                        seed = 202210, sim = 100)
-}
+                        seed = 202210, sim = 10)
 }

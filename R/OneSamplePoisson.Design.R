@@ -236,15 +236,11 @@ OneSamplePoisson.Design <- function(prior, nmin = 10, nmax = 100, m0, m1, d = 0,
     if (prior[[1]] == 1) {method = "DIP"
     } else if (prior[[1]] == 2) {method = paste("Gamma(",prior[[2]], ",", prior[[3]], ")", sep="")}
 
-    cat("\nPrior:  ", method,
-        "\nPlanned Sample Size:  ", planN,
-        "\nEfficacy Boundary:  ", ps,
-        "\nFutility Boundary:  ", pf,
-        "\nExact Power: ", exact.power,
-        "\nExact Type I error:  ", exact.t1,
-        "\nExpected sample size: ", ss,
-        "\nExpected sample size standard deviation: ", sd
-    )
+    z <- list(method = method, planned_sample_size = planN,
+              efficacy_boundary = ps, futility_boundary = pf,
+              exact_power = exact.power, exact_type_I_error = exact.t1,
+              expected_sample_size = ss, expected_sample_size_std = sd)
+    z
   } # End of Outputs
 
 }

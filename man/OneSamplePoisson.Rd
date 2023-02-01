@@ -53,14 +53,12 @@ return the power, the type I error, the expected sample size and its
 standard deviation, the probability of reaching the efficacy and futility boundaries.
 }
 \examples{
-\donttest{
 # with traditional Bayesian prior Gamma(0.5,0.001)
 OneSamplePoisson(list(2,0.5,0.001), N = 100, m0 = 0.5, m1 = 0.4, d = 0.05,
                  ps = 0.95, pf = 0.05, alternative = "less",
-                 seed = 202210, sim = 100)
+                 seed = 202210, sim = 10)
 # with DIP
 OneSamplePoisson(list(1,0,0), N = 100, m0 = 0.5, m1 = 0.4, d = 0.05,
                  ps = 0.95, pf = 0.05, alternative = "less",
-                 seed = 202210, sim = 100)
-}
+                 seed = 202210, sim = 10)
 }
